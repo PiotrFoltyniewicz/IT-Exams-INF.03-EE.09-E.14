@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Galeria</title>
+    <link rel="stylesheet" type="text/css" href="styl7.css"/>
+</head>
+<body>
+    <header>
+        <h2>Galeria miejsc ciekawych</h2>
+    </header>
+    <main>
+        <img src="lanzarotte.jpg" alt="galeria"/>
+    </main>
+    <section id="podGlownym">
+        <section id="lewy">
+            <h3>Przeglądaj zdjęcia</h3>
+            <img src="lanzarotte.jpg" alt="lanzarotte"/>
+            <img src="pekin.jpg" alt="pekin"/>
+            <img src="serengeti.jpg" alt="serengeti"/>
+            <img src="wenecja.jpg" alt="wenecja"/>
+            <img src="tajlandia.jpg" alt="tajlandia"/>
+        </section>
+        <section id="prawy">
+            <h3>Obrazy w naszej galerii</h3>
+            <table>
+                <tr>
+                    <td>Europa</td>
+                    <td>Azja</td>
+                    <td>Afryka</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>1</td>
+                </tr>
+            </table>
+            <p>Polub nas <img src="icon-off.png"/></p>
+            <br/>
+            <a href="https://pixabay.com" target="blank">Odkryj więcej zdjęć</a>
+        </section>
+    </section>
+    <footer>
+        <p>Autor: 12345678901</p>
+    </footer>
+    <script>
+        const obrazGlowny = document.querySelector("main img");
+        let iconOn = false;
+
+        for(let obraz of document.querySelectorAll("#lewy img")){
+            obraz.addEventListener("click", (e) =>{
+                let link = e.srcElement.getAttribute("src");
+                obrazGlowny.setAttribute("src", link);
+            });
+        }
+
+        document.querySelector("#prawy img").addEventListener("click", (e) =>{
+            if(iconOn){
+                e.srcElement.setAttribute("src", "icon-off.png");
+            }
+            else{
+                e.srcElement.setAttribute("src", "icon-on.png");
+            }
+            iconOn = !iconOn;
+        });
+    </script>
+</body>
+</html>

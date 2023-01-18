@@ -1,0 +1,22 @@
+kw 1
+
+CREATE USER 'Agnieszka' IDENTIFIED BY 'haslo4';
+
+kw 2
+
+SELECT AVG(s.rocznik)
+FROM samochody s
+WHERE s.marka = 'opel';
+
+kw 3
+
+SELECT s.marka, k.imie
+FROM samochody s
+JOIN wypozyczenia w
+ON w.samochody_id = s.id
+JOIN klienci k
+ON k.id = w.klienci_id;
+
+kw 4
+
+ALTER TABLE klasa DROP COLUMN cena;

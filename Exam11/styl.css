@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+}
+
+#baner1, #baner2, footer{
+    background-color: #000033;
+    color: white;
+    clear: both;
+}
+
+#baner1{
+    height: 80px;
+    font-family: Arial;
+    padding-top: 10px;
+}
+
+#baner2{
+    height: 20px;
+}
+nav > *{
+    float: left;
+    text-align: center;
+}
+#menu1, #menu3{
+    background-color: #E0E9F1;
+    height: 40px;
+    padding-top: 10px;
+    width: 33%;
+}
+
+#menu2{
+    background-color: #B3C6D9;
+    height: 40px;
+    width: 34%;
+    padding-top: 10px;
+}
+
+main > *{
+    float: left;
+    text-align: center;
+}
+
+#lewy, #prawy{
+    background-color: #B3C6D9;
+    width: 33%;
+    height: 400px;
+    padding-top: 100px;
+}
+
+#srodkowy{
+    background-color: #E0E9F1;
+    width: 34%;
+    height: 400px;
+    padding-top: 100px;
+}
+
+footer{
+    font-family: Arial;
+    height: 80px;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+body{
+    text-align: center;
+    font-size: 20px;
+}
+
+table, td{
+    border: solid 1px;
+}

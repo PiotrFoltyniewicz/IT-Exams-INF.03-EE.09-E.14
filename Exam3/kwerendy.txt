@@ -1,0 +1,21 @@
+kw1
+SELECT m.nazwa AS 'Nazwa materiału', m.ilosc AS 'Ilość', p.nazwaProd AS 'Nazwa producenta'
+FROM materialy m
+INNER JOIN producenci p
+ON m.Producenci_id = p.id
+WHERE m.ilosc > 9;
+
+kw2
+SELECT m.nazwa AS 'Nazwa materiału', p.nazwaProd AS 'Nazwa producenta', j.nazwaJedn AS 'Nazwa jednostki'
+FROM materialy m
+INNER JOIN producenci p
+ON m.Producenci_id = p.id
+INNER JOIN jednostki j
+ON m.Jednostki_id = j.id;
+
+kw3
+CREATE USER 'zaopatrzenie'@'localhost'
+IDENTIFIED BY 'Z@op@trzenie';
+
+kw4
+GRANT SELECT, INSERT, UPDATE, DELETE ON *.* TO 'zaopatrzenie'@'localhost'

@@ -1,0 +1,19 @@
+#kw1
+SELECT r.zespol1 AS 'Zespół 1', r.zespol2 AS 'Zespół 2', r.wynik AS 'Wynik', r.data_rozgrywki AS 'Data rozgrywki'
+FROM rozgrywka r
+WHERE r.zespol1 = 'EVG';
+
+#kw2
+SELECT z.imie AS 'Imię', z.nazwisko AS 'Nazwisko'
+FROM zawodnik z
+WHERE z.pozycja_id = 3;
+
+#kw3
+SELECT z.id AS 'ID zawodnika', z.nazwisko AS 'Nazwisko', p.nazwa AS 'Nazwa pozycji'
+FROM zawodnik z
+INNER JOIN pozycja p
+ON z.pozycja_id = p.id
+WHERE z.id IN (1,2,3);
+
+#kw4
+DROP TABLE liga;

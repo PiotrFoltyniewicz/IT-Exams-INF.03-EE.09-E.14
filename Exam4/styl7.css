@@ -1,0 +1,57 @@
+*{
+    font-family: Helvetica;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+footer p, header h2{
+    margin-top: 0;
+}
+
+header, footer{
+    background-color: rgb(70,130,180);
+    color: white;
+    height: 30px;
+    text-align: center;
+    margin-top: 0;
+}
+
+main{
+    background-color: rgb(176,196,222);
+    padding: 50px;
+    text-align: center;
+}
+
+#lewy{
+    background-color: rgb(70,130,180);
+    color: white;
+    height: 300px;
+    width: 80%;
+}
+
+#prawy{
+    background-color: rgb(70,130,180);
+    color: white;
+    height: 300px;
+    width: 20%;
+}
+
+main img{
+    padding: 3px;
+    border: dashed blue 1px;
+    border-radius: 10px;
+}
+
+#lewy img{
+    height: 40%;
+}
+
+#lewy img:hover{
+    border: solid white 1px;
+}
+
+#podGlownym{
+    display: flex;
+    flex-direction: row;
+}

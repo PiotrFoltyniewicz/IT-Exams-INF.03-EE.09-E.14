@@ -1,0 +1,63 @@
+header{
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 370px;
+}
+
+#mecze{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.mecz{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    width: 200px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.mecz:hover{
+    border-color: white;
+}
+
+#glowny{
+    background-color: whitesmoke;
+    height: 50px;
+}
+
+#info{
+    display: flex;
+    flex-direction: row;
+}
+
+#lewy{
+    background-color: whitesmoke;
+    width: 70%;
+    height: 230px;
+}
+#prawy{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    background-color: whitesmoke;
+    width: 30%;
+    height: 230px;
+}
+body{
+    font-family: "Tahoma";
+    background-color: crimson;
+}
+h2{
+    display: flex;
+    justify-content: center;
+    letter-spacing: 7px;
+    text-transform: capitalize;
+}

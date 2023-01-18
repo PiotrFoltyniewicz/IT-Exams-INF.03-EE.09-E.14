@@ -1,0 +1,23 @@
+#kw 1
+SELECT id, nazwa, wystepowanie
+FROM Ryby
+WHERE styl_zycia = 2;
+
+#kw 2
+SELECT akwen, wojewodztwo
+FROM lowisko
+WHERE rodzaj IN (2,3);
+
+#kw3
+SELECT nazwa
+FROM ryby
+INNER JOIN okres_ochronny o
+ON o.Ryby_id = ryby.id
+WHERE o.od_miesiaca = 0 OR o.do_miesiaca = 0;
+
+#kw4
+CREATE TABLE `wedkarze` (
+    id INT UNSIGNED NOT NULL, 
+    imie VARCHAR(50) NULL, 
+    nazwisko VARCHAR(50) NULL,
+    punkty INT NULL)

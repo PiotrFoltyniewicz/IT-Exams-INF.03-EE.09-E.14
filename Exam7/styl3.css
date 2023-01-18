@@ -1,0 +1,61 @@
+header{
+    display: flex;
+    flex-direction: row;
+}
+#logo{
+    display: flex;
+    justify-self: start;
+    background-color: #FF7F50;
+    width: 25%;
+    height: 100px;
+}
+#baner{
+    display: flex;
+    background-color: #FF7F50;
+    justify-content: center;
+    width: 75%;
+    height: 100px;
+    font-size: 130%;
+}
+main{
+    background-color: #FF7F50;
+    padding: 70px;
+}
+#wrapper{
+    display: flex;
+    flex-direction: row;
+}
+#lewy{
+    width: 40%;
+    height: 400px;
+}
+#prawy
+{
+    display: flex;
+    justify-content: end;
+    width: 60%;
+    height: 400px;
+}
+footer{
+    background-color: #FF7F50;
+    padding: 20px;
+}
+body{
+    font-family: Georgia;
+    background-color: #FFFAFA;
+}
+form{
+    margin: 80px;
+}
+table{
+    color: white;
+    width: 80%;
+    border: 1px dotted white;
+}
+td{
+    text-align: center;
+}
+tr:hover{
+    background-color: #D3D3D3;
+    color: black;
+}

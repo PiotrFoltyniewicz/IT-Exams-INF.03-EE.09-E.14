@@ -1,0 +1,23 @@
+kw1
+
+SELECT w.id, w.cel, w.cena
+FROM wycieczki w
+WHERE w.dostepna = False;
+
+kw2
+
+SELECT z.nazwaPliku, z.podpis
+FROM zdjecia z
+ORDER BY 2 DESC;
+
+kw3
+
+SELECT z.podpis, w.cena, w.cel
+FROM wycieczki w
+INNER JOIN zdjecia z
+ON z.id = w.zdjecia_id
+WHERE w.cena < 1200;
+
+kw4
+
+ALTER TABLE wycieczki DROP COLUMN dataWyjazdu;

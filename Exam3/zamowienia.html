@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Zamówienia hurtowe</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styl4.css">
+    </head>
+    <body>
+        <header>
+            <h1>Sieci komputerowe</h1>
+        </header>
+        <main>
+            <section id="lewy">
+                <h2>Aktualizacja i zamówienia materiałów</h2>
+                <p>Do wewnętrznego użytku firmy</p>
+                <img src="obraz.png" alt="sieć komputerowa"/>
+            </section>
+            <section id="prawy">
+                <table>
+                    <tr>
+                        <th>Produkt</th>
+                        <th>Jednostka</th>
+                        <th>Dostępna ilość</th>
+                        <th>Aktualizacja</th>
+                        <th>Zamówienie</th>
+                    </tr>
+                    <tr>
+                        <td>Skrętka U/UTP drut</td>
+                        <td>metr</td>
+                        <td>20</td>
+                        <td><button class="aktualizacja">Aktualizuj</button></td>
+                        <td><button class="zamowienie">Zamów</button></td>
+                    </tr>
+                    <tr>
+                        <td>Skrętka U/UTP linka</td>
+                        <td>metr</td>
+                        <td>2</td>
+                        <td><button class="aktualizacja">Aktualizuj</button></td>
+                        <td><button class="zamowienie">Zamów</button></td>
+                    </tr>
+                    <tr>
+                        <td>Wtyki 8P8C</td>
+                        <td>sztuki</td>
+                        <td>10</td>
+                        <td><button class="aktualizacja">Aktualizuj</button></td>
+                        <td><button class="zamowienie">Zamów</button></td>
+                    </tr>
+                    <tr>
+                        <td>Moduły Keystone</td>
+                        <td>sztuki</td>
+                        <td>30</td>
+                        <td><button class="aktualizacja">Aktualizuj</button></td>
+                        <td><button class="zamowienie">Zamów</button></td>
+                    </tr>
+                </table>
+            </section>
+        </main>
+        <footer>
+            <a href="http://sieci.pl/" target="_blank">Nasza strona internetowa</a>
+            <p>Stronę przygotował: 007</p>
+        </footer>
+        <script>
+
+            Braki();
+            let idZamowienia = 0;
+            
+            const przyciskiAkt = document.querySelectorAll(".aktualizacja");
+            const przyciskiZam = document.querySelectorAll(".zamowienie");
+
+            for(let przycisk of przyciskiAkt)
+            {
+                przycisk.addEventListener("click", Aktualizacja);
+            }
+
+            for(let przycisk of przyciskiZam)
+            {
+                przycisk.addEventListener("click", Zamowienie);
+            }
+            
+            function Aktualizacja(e){
+                let nowaIlosc = prompt("Podaj nową ilość");
+                e.currentTarget.parentNode.previousElementSibling.innerText = nowaIlosc;
+
+                Braki();
+            }
+
+            function Zamowienie(e){
+                idZamowienia++;
+                let nazwaProduktu = e.currentTarget.parentNode.parentNode.firstElementChild.innerText;
+                alert("Zamówienie nr " + idZamowienia + " Produkt: " + nazwaProduktu);
+            }
+
+            function Braki(){
+                const wiersze = document.querySelectorAll("table tr");
+
+                for(let i = 1; i < wiersze.length; i++)
+                {
+
+                   let komorka = wiersze[i].children[2];
+                    
+
+                    if(komorka.innerText == 0)
+                    {
+                        komorka.style.backgroundColor = "Red";
+                    }
+                    else if (komorka.innerText >= 1 && komorka.innerText <= 5)
+                    {
+                        komorka.style.backgroundColor = "Yellow";
+                    }
+                    else{
+                        komorka.style.backgroundColor = "Honeydew";
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

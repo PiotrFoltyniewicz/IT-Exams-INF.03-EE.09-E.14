@@ -1,0 +1,17 @@
+kw1
+SELECT b.informacja, b.wart_min, b.wart_max
+FROM bmi b;
+
+kw2
+INSERT INTO `wynik` (`id`, `bmi_id`, `data_pomiaru`, `wynik`) VALUES (NULL, '3', '2022-05-10', '27');
+
+kw3
+SELECT w.wynik, w.data_pomiaru, b.informacja
+FROM wynik w
+JOIN bmi b
+ON w.bmi_id = b.id;
+
+kw4
+SELECT b.wart_min, b.wart_max
+FROM bmi b
+WHERE b.informacja = 'Nadwaga';

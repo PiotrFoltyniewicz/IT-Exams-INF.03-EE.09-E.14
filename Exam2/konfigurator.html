@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style w JavaScript</title>
+    <link rel="stylesheet" type="text/css" href="styl6.css">
+</head>
+<body>
+    <main id="lewy">
+        <h1>Konfigurator stylu</h1>
+        <p>Podaj kolor tła</p>
+        <button class="bgColor">Indigo</button>
+        <button class="bgColor">SteelBlue</button>
+        <button class="bgColor">Olive</button>
+        <p>Podaj kolor czcionki</p>
+        <select id="fontColor">
+            <option>White</option>
+            <option>Tan</option>
+            <option>Bisque</option>
+            <option>Plum</option>
+        </select>
+        <p>Podaj rozmiar czcionki w procentach np. 200%</p>
+        <input type="text" placeholder="100%" id="fontSize">
+        <p>Czy rysunek ma mieć ramkę?</p>
+        <label>
+            <input type="checkbox" id="borderCheckbox" checked>
+            Rysuj ramkę
+        </label>
+        <p>Jaki jest typ punktora listy?</p>
+        <label>
+            <input type="radio" name="listBullet" value="disc">dysk
+        </label>
+        <br/>
+        <label>
+            <input type="radio" name="listBullet" value="square">kwadrat
+        </label>
+        <br/>
+        <label>
+            <input type="radio" name="listBullet" value="circle">okrąg
+        </label>
+    </main>
+    <section id="prawy">
+        <img src="gibraltar.jpg" alt="półwysep Gibraltar" class="borderOn">
+        <ul>
+            <li>element 1</li>
+            <li>element 2</li>
+            <li>element 3</li>
+        </ul>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+    </section>
+    <footer id="stopka">
+        <p>Autor: 00000000000</p>
+    </footer>
+    <script>
+        for(const button of document.querySelectorAll(".bgColor")){
+            button.addEventListener('click', (e) => {
+                document.querySelector("#prawy").style.backgroundColor = button.innerText;
+            });
+        }
+
+        document.querySelector("#fontColor").addEventListener('click', (e) => {
+            document.querySelector("#prawy").style.color = e.srcElement.value;
+        });
+
+        document.querySelector("#fontSize").addEventListener('blur', (e) => {
+            document.querySelector("#prawy").style.fontSize = e.srcElement.value;
+        });
+
+        document.querySelector("#borderCheckbox").addEventListener('click', switchBorder);
+
+        function switchBorder(e){
+            if(e.srcElement.checked){
+                document.querySelector("#prawy img").classList.add("borderOn");
+            }
+            else{
+                document.querySelector("#prawy img").classList.remove("borderOn");
+            }
+        }
+
+        for(const radio of document.querySelectorAll("input[name='listBullet']"))
+        {
+            radio.addEventListener('click', (e) => {
+                document.querySelector("#prawy ul").style.listStyleType = radio.value;
+            });
+        }
+    </script>
+</body>
+</html>
