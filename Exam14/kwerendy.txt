@@ -1,0 +1,23 @@
+Zapytanie 1
+
+SELECT r.id, r.nazwa, r.wystepowanie
+FROM ryby r
+WHERE r.styl_zycia = 1;
+
+Zapytanie 2
+
+SELECT o.Ryby_id, o.wymiar_ochronny
+FROM okres_ochronny o
+WHERE o.wymiar_ochronny < 30;
+
+Zapytanie 3
+
+SELECT r.nazwa, l.akwen, l.wojewodztwo
+FROM ryby r
+JOIN lowisko l
+ON r.id = l.Ryby_id
+WHERE l.rodzaj = 3;
+
+Zapytanie 4
+
+ALTER TABLE ryby ADD COLUMN dobowy_limit TINYINT UNSIGNED;

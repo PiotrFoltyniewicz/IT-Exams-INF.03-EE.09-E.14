@@ -1,0 +1,23 @@
+kwerenda 1
+
+SELECT w.id, w.dataWyjazdu, w.cel, w.cena
+FROM wycieczki w
+WHERE w.dostepna = TRUE;
+
+kwerenda 2
+
+SELECT z.nazwaPliku, z.podpis
+FROM zdjecia z
+ORDER BY z.podpis;
+
+kwerenda 3
+
+SELECT z.nazwaPliku, w.cel
+FROM zdjecia z
+JOIN wycieczki w
+ON w.zdjecia_id = z.id
+WHERE w.cena > 1000;
+
+kwerenda 4
+
+ALTER TABLE wycieczki ADD COLUMN dataPrzyjazdu DATE AFTER dataWyjazdu;

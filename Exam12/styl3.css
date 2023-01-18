@@ -1,0 +1,62 @@
+*{
+    font-family: Verdana;
+}
+
+body{
+    margin: 0;
+}
+
+header, footer{
+    background-color: rgb(205,92,92);
+    color: white;
+    text-align: center;
+    padding: 5px;
+    clear: both;
+}
+#lewo, #prawo{
+    background-color: rgb(250,235,215);
+    width: 25%;
+    height: 500px;
+    float: left;
+}
+
+#srodek{
+    background-color: rgb(250,235,215);
+    width: 50%;
+    height: 500px;
+    float: left;
+}
+
+#zdjecia{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#dane{
+    background-color: rgb(210,180,140);
+    color: white;
+    clear: both;
+}
+
+h2{
+    text-align: center;
+}
+
+h2::first-letter{
+    font-size: 150%;
+}
+
+img{
+    flex: 30%;
+    height: 100px;
+    padding: 7px;
+    object-fit: contain;
+}
+
+img:hover{
+    background-color: rgb(210,180,140);
+}
+
+#dane p{
+    margin-bottom: 0;
+}
