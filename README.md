@@ -4,4 +4,4 @@ Polish IT exams needed to become technician. They include SQL, HTML, CSS, JavaSc
 These are which I've done in preparation for my exam.
 
 This project includes only final code and queries in file kwerendy.txt
-This project doesn't include the task, database on which queries are working
+This project doesn't include the task or database on which queries are working
